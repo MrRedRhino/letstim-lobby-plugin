@@ -1,0 +1,5 @@
+name: BestLobbyPlugin
+version: '${project.version}'
+main: org.pipeman.bestlobbyplugin.BestLobbyPlugin
+api-version: 1.18
+load: POSTWORLD
