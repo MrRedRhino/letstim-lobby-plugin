@@ -1,7 +1,6 @@
 package org.pipeman.bestlobbyplugin;
 
 import net.kyori.adventure.text.Component;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -9,6 +8,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.Team;
 
 public class PlayerHandling implements Listener {
 
@@ -28,7 +28,7 @@ public class PlayerHandling implements Listener {
         if (sc.getTeam("hub") == null) {
             sc.registerNewTeam("hub");
         }
-        sc.getTeam("hub").addPlayer(event.getPlayer());
+        sc.getTeam("hub").addPlayer(event.getPlayer()); // Team cannot be null! It was created beforehand.
         ItemStack newStack = new ItemStack(Material.COMPASS);
         ItemMeta meta = newStack.getItemMeta();
         meta.displayName(Component.text("Server Selector"));
