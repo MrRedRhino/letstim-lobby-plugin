@@ -33,7 +33,7 @@ public class PlayerHandling implements Listener {
         ItemMeta meta = newStack.getItemMeta();
         meta.displayName(Component.text("Server Selector"));
         newStack.setItemMeta(meta);
-        event.getPlayer().getInventory().setItem(0, newStack); // MinecraftTim69
+        event.getPlayer().getInventory().setItem(0, newStack);
     }
 
 //    @EventHandler
